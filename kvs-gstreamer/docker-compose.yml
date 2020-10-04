@@ -1,0 +1,10 @@
+version: "3.3"
+
+services:
+  producer:
+    container_name: kvs-gstreamer
+    build: .
+    devices:
+      - /dev/video0:/dev/video0
+    env_file:
+      - .env
